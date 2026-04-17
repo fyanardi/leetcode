@@ -33,6 +33,7 @@ def python_list_to_linked_list(values: list[int]) -> ListNode | None:
 
     return head
 
+
 def linked_list_to_python_list(head: ListNode | None):
     if head is None:
         return []
