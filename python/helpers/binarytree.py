@@ -1,3 +1,6 @@
+from collections import deque
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -35,6 +38,38 @@ def parse_binary_tree(nodes: list[int | None]) -> TreeNode | None:
             tree_nodes.append(tree_node.right)
 
     return root_node
+
+
+def serialize_binary_tree(root: TreeNode | None) -> list[int | None]:
+    """
+    Helper function to serialize binary tree `TreeNode` represented by the root node into a list of int values
+    """
+    if root is None:
+        return []
+
+    nodes = deque()
+    nodes.append(root)
+
+    result: list[int | None] = []
+
+    while len(nodes) > 0:
+        node = nodes.popleft()
+
+        if node is None:
+            result.append(None)
+            continue
+
+        result.append(node.val)
+
+        nodes.append(node.left)
+        nodes.append(node.right)
+
+    for i in range(len(result) - 1, -1, -1):
+        if result[i] is not None:
+            break
+        result.pop()
+
+    return result
 
 
 def print_binary_tree(node: TreeNode | None, indent: int):
