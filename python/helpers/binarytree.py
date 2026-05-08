@@ -20,10 +20,14 @@ def build_binary_tree(nodes: list[int | None]) -> TreeNode | None:
 
     while len(nodes) > 0:
         tree_node = tree_nodes.pop(0)
+
         left_val = nodes.pop(0)
         if left_val is not None:
             tree_node.left = TreeNode(left_val)
             tree_nodes.append(tree_node.left)
+
+        if len(nodes) == 0:
+            break
 
         right_val = nodes.pop(0)
         if right_val is not None:
@@ -42,6 +46,3 @@ def print_binary_tree(node: TreeNode | None, indent: int):
         print(f"{tabs}node val={node.val} left={node.left} right={node.right}")
         print_binary_tree(node.left, indent + 1)
         print_binary_tree(node.right, indent + 1)
-
-
-
