@@ -1,6 +1,6 @@
 from helpers.binarytree import (
     TreeNode,
-    build_binary_tree,
+    parse_binary_tree,
     # print_binary_tree
 )
 
@@ -52,11 +52,11 @@ class Solution:
 if __name__ == "__main__":
     solution = Solution()
 
-    # print_binary_tree(build_binary_tree([3, 5, 1, 6, 2, 9, 8, None, None, 7, 4]), 0)
-    # print_binary_tree(build_binary_tree([3, 5, 1, 6, 7, 4, 2, None, None, None, None, None, None, 9, 8]), 0)
+    # print_binary_tree(parse_binary_tree([3, 5, 1, 6, 2, 9, 8, None, None, 7, 4]), 0)
+    # print_binary_tree(parse_binary_tree([3, 5, 1, 6, 7, 4, 2, None, None, None, None, None, None, 9, 8]), 0)
 
     assert solution.leafSimilar(
-        root1=build_binary_tree([3, 5, 1, 6, 2, 9, 8, None, None, 7, 4]),
-        root2=build_binary_tree([3, 5, 1, 6, 7, 4, 2, None, None, None, None, None, None, 9, 8])
+        root1=parse_binary_tree([3, 5, 1, 6, 2, 9, 8, None, None, 7, 4]),
+        root2=parse_binary_tree([3, 5, 1, 6, 7, 4, 2, None, None, None, None, None, None, 9, 8])
     ) == True
-    assert solution.leafSimilar(root1=build_binary_tree([1,2,3]), root2=build_binary_tree([1,3,2])) == False
+    assert solution.leafSimilar(root1=parse_binary_tree([1,2,3]), root2=parse_binary_tree([1,3,2])) == False

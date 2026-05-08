@@ -5,9 +5,9 @@ class TreeNode:
         self.right = right
 
 
-def build_binary_tree(nodes: list[int | None]) -> TreeNode | None:
+def parse_binary_tree(nodes: list[int | None]) -> TreeNode | None:
     """
-    Helper function to build binary tree from a list of int values (not part of the solution)
+    Helper function to parse a list of int values into a binary tree `TreeNode` representation
     """
     if len(nodes) == 0:
         return None

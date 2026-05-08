@@ -1,6 +1,6 @@
 from helpers.binarytree import (
     TreeNode,
-    build_binary_tree,
+    parse_binary_tree,
 )
 
 
@@ -47,5 +47,5 @@ class Solution:
 if __name__ == "__main__":
     solution = Solution()
 
-    assert solution.maxDepth(build_binary_tree([3, 9, 20, None, None, 15, 7])) == 3
-    assert solution.maxDepth(build_binary_tree([1, None, 3])) == 2
+    assert solution.maxDepth(parse_binary_tree([3, 9, 20, None, None, 15, 7])) == 3
+    assert solution.maxDepth(parse_binary_tree([1, None, 3])) == 2

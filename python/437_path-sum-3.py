@@ -1,6 +1,6 @@
 from helpers.binarytree import (
     TreeNode,
-    build_binary_tree,
+    parse_binary_tree,
 )
 
 
@@ -52,7 +52,7 @@ class Solution:
 if __name__ == "__main__":
     solution = Solution()
 
-    assert solution.pathSum(build_binary_tree([10, 5, -3, 3, 2, None, 11, 3, -2, None, 1]), 8) == 3
-    assert solution.pathSum(build_binary_tree([5, 4, 8, 11, None, 13, 4, 7, 2, None, None, 5, 1]), 22) == 3
-    assert solution.pathSum(build_binary_tree([1, 2]), 2) == 1
-    assert solution.pathSum(build_binary_tree([1, None, 2, None, 3, None, 4, None, 5]), 3) == 2
+    assert solution.pathSum(parse_binary_tree([10, 5, -3, 3, 2, None, 11, 3, -2, None, 1]), 8) == 3
+    assert solution.pathSum(parse_binary_tree([5, 4, 8, 11, None, 13, 4, 7, 2, None, None, 5, 1]), 22) == 3
+    assert solution.pathSum(parse_binary_tree([1, 2]), 2) == 1
+    assert solution.pathSum(parse_binary_tree([1, None, 2, None, 3, None, 4, None, 5]), 3) == 2
