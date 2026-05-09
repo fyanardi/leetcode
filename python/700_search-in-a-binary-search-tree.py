@@ -27,5 +27,5 @@ if __name__ == "__main__":
     ) == [2, 1, 3]
 
     assert serialize_binary_tree(
-        root=solution.searchBST(parse_binary_tree([4,2,7,1,3]), 5)
+        root=solution.searchBST(parse_binary_tree([4, 2, 7, 1, 3]), 5)
     ) == []
