@@ -35,7 +35,6 @@ class Solution:
         return province
 
 
-
 if __name__ == "__main__":
     solution = Solution()
 
