@@ -4,6 +4,10 @@
 public class Solution_392 {
     static class Solution {
         public boolean isSubsequence(String s, String t) {
+            if (s.isEmpty()) {
+                return true;
+            }
+
             int i = 0;
             int j = 0;
 
