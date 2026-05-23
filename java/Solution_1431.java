@@ -26,6 +26,7 @@ public class Solution_1431 {
         }
     }
 
+    // Run with -ea to enable assertions
     public static void main(String[] args) {
         Solution solution = new Solution();
 
